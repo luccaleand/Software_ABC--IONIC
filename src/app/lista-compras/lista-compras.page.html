@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="light" mode="ios">
+    <ion-title>listaCompras</ion-title>
+    <ion-buttons>
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-card-content>
+    <ion-button routerLink="/adicionar">Adcionar</ion-button>
+  </ion-card-content>
+
+  <h2>itens da lista</h2>
+  <ion-list lines="full">
+    <ion-item *ngFor="let produto of meusprodutos">
+      <ion-label>{{produto.produto}} // {{produto.quantidade}}</ion-label>
+      <ion-button color="danger" (click)="deletar(produto.id)">{{btnButtom}}</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- <h2>itens removidos</h2>
+   <ion-list lines="inset">
+     <ion-item>
+       <ion-label>Inset Lines</ion-label>
+     </ion-item>
+     <ion-item>
+       <ion-label>Inset Lines</ion-label>
+     </ion-item>
+     <ion-item>
+       <ion-label>Inset Lines</ion-label>
+     </ion-item>
+   </ion-list> 
+
+
+
+   
+  <ion-list>
+    <ion-item>item:
+      <strong>
+        laranja
+      </strong>
+
+      <strong>
+        Kg: 2
+        quantiadade: 5 / 2kg
+      </strong>
+    </ion-item>
+  </ion-list>
+
+  <ion-card color="warning">
+    <ion-card-header>
+      <ion-card-title>Card Title</ion-card-title>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+  </ion-card>  -->
+</ion-content>

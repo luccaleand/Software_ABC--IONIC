@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+
+  <!-- caso queira mudar ir em 'variable.scss' -->
+
+  <ion-toolbar color="light" mode="ios">
+    <ion-title color="warning">
+      {{titulo}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!--   <ion-label>Olá Mundo!</ion-label>
+  <h2>Componente</h2> -->
+  <!--   <ion-button routerLink="/alerta" color="danger">Alerta</ion-button>
+  <ion-button routerLink="/actionsheet" color="success">actionsheet</ion-button>
+ -->
+  <hr>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Olá, acrescente suas compras</ion-card-title>
+      <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-button routerLink="/adicionar">Adicionar</ion-button>
+      <ion-button color="success" routerLink="/lista-compras">listar suas compras</ion-button>
+    </ion-card-content>
+<!--     <ion-label>Este tambem é um <button routerLink="/lista-compras">botão</button> para listar suas compras</ion-label>
+ -->  </ion-card>
+
+
+</ion-content>

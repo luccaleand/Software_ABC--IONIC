@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="light" mode="ios">
+    <ion-title color="warning">
+      {{titulo}}
+    </ion-title>
+    <ion-buttons>
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">adicionar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <form #form="ngForm" (ngSubmit)="adicionar(form)">
+    <ion-list>
+      <ion-item>
+        <ion-label for=""><strong>Adicionar um novo item: </strong></ion-label>
+        <ion-input label="produto" placeholder="Item" type="text" name="produto" ngModel request ></ion-input>
+        <!--       <ion-input [clearInput]="true" placeholder="Enter text to see clear button" value="Default value"></ion-input>-->
+      </ion-item>
+
+      <ion-item>
+        <ion-label for=""><strong>Quantidade: </strong></ion-label>
+        <ion-input label="quantidade" placeholder="00" type="number" name="quantidade" ngModel request></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button class="btn btn-primary mt-3" type="submit">{{ nameButton }}</ion-button>
+    <ion-button color="success" routerLink="/lista-compras">listar suas compras</ion-button>
+
+
+
+  </form>
+  <!-- Bind button disabled state to `isUnchanged` property
+<button type="button" [disabled]="isUnchanged">Save</button> -->
+
+
+
+
+
+
+</ion-content>
